@@ -13,10 +13,13 @@ public class Palindrome {
         Boolean isAPalindrome = true;
         
         for (int i = 0; i < text.length() / 2; i++) {
-            int index = text.length() - i;
-            if (!text.substring(i, i+1).equals(text.substring(index-1, index))){
+            //Find index of the letter to match
+            int iR = text.length() - i -1;
+            
+            if (!(text.charAt(i) == text.charAt(iR))){
                 //if 2 characters doesn't match at any point.
                 isAPalindrome = false;
+                break;
             }
         }
 
