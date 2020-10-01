@@ -32,7 +32,7 @@ public class RomanNumerals {
         System.out.print("Enter positive integer to convert: ");
         String input = myScanner.next();
         try {
-            if(Integer.parseInt(input) > 3999){
+            if(Integer.parseInt(input) > 3999 || Integer.parseInt(input) < 0){
                 System.out.println("Invalid input. ");
                 return getInput(myScanner);
             } else{

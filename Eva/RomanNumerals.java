@@ -4,9 +4,8 @@ public class RomanNumerals {
 
 	public static void main(String[] args) {
 
-		Scanner input = new Scanner(System.in);
-		System.out.println("Enter positive interger to convert to roman numeral:");
-		int n = input.nextInt();
+		Scanner myInput = new Scanner(System.in);
+		int n = getmyInput(myInput);
 		String roman ="";
 		boolean numbersToConvert=true;	
 		
@@ -76,6 +75,20 @@ public class RomanNumerals {
 		}
 		System.out.println("Roman number:"+ roman);
 
+	}
+	public static int getmyInput(Scanner myInput) {
+		System.out.print("Enter positive interger to convert to roman numeral:");
+		int n;
+		if(myInput.hasNextInt()){
+			n = myInput.nextInt();
+			return n;
+		} else {
+			System.out.println("Invalid myInput. ");
+			//Next line is to clear the scanner to avoid infinite loop
+			myInput.next();
+			return getmyInput(myInput);
+		}
+		
 	}
 
 }
