@@ -85,7 +85,7 @@ public class RomanNumerals {
 			n = myInput.nextInt();
 			return n;
 		} else {
-			System.out.println("Invalid myInput. ");
+			System.out.println("Invalid input. ");
 			//Next line is to clear the scanner to avoid infinite loop
 			myInput.next();
 			return getmyInput(myInput);
