@@ -8,6 +8,8 @@ public class RomanNumerals {
 		int n = getmyInput(myInput);
 		String roman ="";
 		boolean numbersToConvert=true;	
+		String[] numerals = ["M","Cm","D","CD","C","XC","L","XL","X","IX","V","IV","I"];
+		int[] numeralNumbers = [1000, 500, 100, 50, 10, 5, 1];
 		
 		while (numbersToConvert) {
 			if (n<=0) {
